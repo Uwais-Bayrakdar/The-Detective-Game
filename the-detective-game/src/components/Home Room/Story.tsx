@@ -6,7 +6,7 @@ type storyProp = {
 export function Story({storyCase, storyIndex}: storyProp) {
     return (
     <div className="story-div">
-        <p className="story-text">{storyCase[storyIndex]}</p>
+        <p className="story-text">Scenario: {storyCase[storyIndex]}</p>
     </div>
     )
 }

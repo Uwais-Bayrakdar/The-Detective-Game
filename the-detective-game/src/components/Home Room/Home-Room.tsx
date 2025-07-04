@@ -1,18 +1,18 @@
 import { RenderCards } from "./RenderCards"
 import { useNavigate } from "react-router-dom"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { hintsCases, storyCases } from "../../game-info/hints";
 import { useGame } from "../GameContext";
 import type { HintObject } from "../GameContext";
 import { Story } from "./Story";
 
-let randomHintIndex: number;
 let shuffledHints: HintObject[];
 let thief: number;
 
 export function HomeRoom() {
     const navigate = useNavigate();
     const { setThiefIndex, setSelectedCase } = useGame();
+    const [randomHintIndex, setRandomHintIndex] = useState<number>(-1);
 
     useEffect(() => {
 
@@ -25,8 +25,8 @@ export function HomeRoom() {
         localStorage.removeItem("hintsCase");
         localStorage.removeItem("thiefIndex"); 
       } else {
-        randomHintIndex = Math.floor(Math.random() * hintsCases.length);
-        const originalCase = hintsCases[randomHintIndex];
+      const index = Math.floor(Math.random() * hintsCases.length);
+      const originalCase = hintsCases[index];
         const theLieHintObj = originalCase.find(obj => obj.isLie === true);
         if (!theLieHintObj) return;
 
@@ -36,6 +36,7 @@ export function HomeRoom() {
 
         setSelectedCase(shuffledHints);
         setThiefIndex(thief); 
+        setRandomHintIndex(index);
       }
     }, []);
 
