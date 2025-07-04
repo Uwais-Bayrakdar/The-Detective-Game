@@ -1,10 +1,12 @@
 import { RenderCards } from "./RenderCards"
 import { useNavigate } from "react-router-dom"
 import { useEffect } from "react";
-import { hintsCases } from "../../game-info/hints";
+import { hintsCases, storyCases } from "../../game-info/hints";
 import { useGame } from "../GameContext";
 import type { HintObject } from "../GameContext";
+import { Story } from "./Story";
 
+let randomHintIndex: number;
 let shuffledHints: HintObject[];
 let thief: number;
 
@@ -23,7 +25,7 @@ export function HomeRoom() {
         localStorage.removeItem("hintsCase");
         localStorage.removeItem("thiefIndex"); 
       } else {
-        const randomHintIndex = Math.floor(Math.random() * hintsCases.length);
+        randomHintIndex = Math.floor(Math.random() * hintsCases.length);
         const originalCase = hintsCases[randomHintIndex];
         const theLieHintObj = originalCase.find(obj => obj.isLie === true);
         if (!theLieHintObj) return;
@@ -47,6 +49,7 @@ export function HomeRoom() {
     return (
         <div className="home-container">
           <h1>Detective Game</h1>
+          <Story storyIndex={randomHintIndex} storyCase={storyCases}/>
           <RenderCards/>
           <div className="btns">
             <button onClick={handleClick} className="goto-guessing-room-btn">Go to guessing room</button>

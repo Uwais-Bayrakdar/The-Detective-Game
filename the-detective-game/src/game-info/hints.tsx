@@ -52,3 +52,10 @@ export const hintsCases: Hint[][] = [
     { message: "I never got close to the laptop, I was finalizing the social posts on my phone.", isLie: false }
   ]
 ]
+
+
+export const storyCases = [
+  "Scenario: A high-tech drone controller was found smashed during a class field trip. Only 12 students were around the equipment. One of them broke it — and is now lying.",
+  "Scenario: During a school field trip to a botanical garden, the class was gathered on the grass near the drone station. At some point, the controller was found smashed — no one admitted to it. Each person gave a statement.",
+  "Scenario: At a corporate innovation summit, one team's USB drive containing their presentation was mysteriously corrupted minutes before their pitch. It had worked fine during the rehearsal. Security footage shows that someone accessed the team's laptop just before the incident — but no clear face was seen. The team questions everyone in the lounge area."
+]
