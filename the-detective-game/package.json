@@ -1,5 +1,6 @@
 {
   "name": "the-detective-game",
+  "homepage": "https://Uwais-Bayrakdar.github.io/The-Detective-Game",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,7 +12,6 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://Uwais-Bayrakdar.github.io/The-Detective-Game",
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
