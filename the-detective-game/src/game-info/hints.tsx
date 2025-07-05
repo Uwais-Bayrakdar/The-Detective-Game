@@ -117,10 +117,9 @@ export const hintsCases: Hint[][] = [
   ]
 ]
 
-
 export const storyCases = [
+  "A valuable diamond went missing from a museum room. Everyone was in the room during the blackout. One of them is lying to cover up their theft.",
   "A high-tech drone controller was found smashed during a class field trip. Only 12 students were around the equipment. One of them broke it — and is now lying.",
-  "During a school field trip to a botanical garden, the class was gathered on the grass near the drone station. At some point, the controller was found smashed — no one admitted to it. Each person gave a statement.",
   "At a corporate innovation summit, one team's USB drive containing their presentation was mysteriously corrupted minutes before their pitch. It had worked fine during the rehearsal. Security footage shows that someone accessed the team's laptop just before the incident — but no clear face was seen. The team questions everyone in the lounge area.",
   "A shipment of high-value components went missing from the secure warehouse section overnight. The inventory system showed everything was intact, but the morning team noticed the seal broken and items gone. Surveillance footage was inconclusive due to foggy lenses. Everyone present during the late shift is now under review.",
   "Moments before a critical pitch at the annual tech conference, the presentation file became corrupted. The laptop showed signs of an unsafely ejected USB. All team members were nearby during the prep hour, but no one reported touching the device. Organizers demand to know who caused the disruption.",
